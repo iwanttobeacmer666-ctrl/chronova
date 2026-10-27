@@ -21,7 +21,7 @@
 
 ## 下载后怎么打开
 
-到 [Releases](https://github.com/iwanttobeacmer666-ctrl/chronova/releases/latest) 下载 **时砂-Windows-x64-便携版.zip**，全部解压，打开 `app` 文件夹，双击 **时砂.exe**。
+到 [Releases](https://github.com/iwanttobeacmer666-ctrl/chronova/releases/latest) 下载 **Chronova-v1.0.0-windows-x64-portable.zip**，全部解压，打开 `app` 文件夹，双击 **时砂.exe**。
 
 便携包已附带 .NET 10.0.11 运行组件，无需另装 .NET。请保留完整文件夹，尤其是 `app/runtime`，不要只复制一个 exe，也不要直接在压缩包里运行。把文件夹放在自己有写入权限的位置，程序才能保存任务和设置。
 
