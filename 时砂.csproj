@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>时砂</AssemblyName>
+    <RootNamespace>ShiSha</RootNamespace>
+    <ApplicationIcon>assets\时砂.ico</ApplicationIcon>
+    <Product>时砂</Product>
+    <Title>时砂</Title>
+    <Description>时砂桌面时钟、任务提醒与天气</Description>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="App.xaml.cs"/><Compile Include="Core.cs"/><Compile Include="MainWindow.xaml.cs"/><Compile Include="MainWindow.Tools.cs"/></ItemGroup>
+  <ItemGroup><Content Include="assets\时砂.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest"/></ItemGroup>
+  <ItemGroup><Compile Include="UiText.cs"/><EmbeddedResource Include="Localization.json" LogicalName="ShiSha.Localization.json"/></ItemGroup>
+  <ItemGroup><Compile Include="Weather.cs"/><Compile Include="MainWindow.Weather.cs"/><EmbeddedResource Include="Cities.json" LogicalName="ShiSha.Cities.json"/></ItemGroup>
+  <ItemGroup><Compile Include="ChinaRegions.cs"/><Compile Include="MainWindow.China.cs"/><EmbeddedResource Include="ChinaProvinces.json" LogicalName="ShiSha.ChinaProvinces.json"/></ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+# User data and local settings
+**/data/
+**/region-live-cache/
+.env
+.env.*
+!.env.example
+*.user
+*.suo
+.vs/
+
+# Build and package output; portable ZIPs belong in Releases
+**/bin/
+**/obj/
+/app/
+/release/
+/.build/
+/.package-check/
+/.upload/
+__pycache__/
+*.pyc
+*.tmp
+*.pdb
+*.zip
+
+# Local development notes use machine-specific paths
+/使用说明.md

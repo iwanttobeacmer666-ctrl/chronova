@@ -1,0 +1,442 @@
+[
+  {
+    "Id": "CN-Guangzhou",
+    "CountryCode": "CN",
+    "Name": "Guangzhou",
+    "ChineseName": "广州",
+    "Latitude": 23.11667,
+    "Longitude": 113.25,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1809858
+  },
+  {
+    "Id": "CN-Shanghai",
+    "CountryCode": "CN",
+    "Name": "Shanghai",
+    "ChineseName": "上海",
+    "Latitude": 31.22222,
+    "Longitude": 121.45806,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1796236
+  },
+  {
+    "Id": "CN-Beijing",
+    "CountryCode": "CN",
+    "Name": "Beijing",
+    "ChineseName": "北京",
+    "Latitude": 39.9075,
+    "Longitude": 116.39723,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1816670
+  },
+  {
+    "Id": "CN-Shenzhen",
+    "CountryCode": "CN",
+    "Name": "Shenzhen",
+    "ChineseName": "深圳",
+    "Latitude": 22.54554,
+    "Longitude": 114.0683,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1795565
+  },
+  {
+    "Id": "CN-Chengdu",
+    "CountryCode": "CN",
+    "Name": "Chengdu",
+    "ChineseName": "成都",
+    "Latitude": 30.66667,
+    "Longitude": 104.06667,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1815286
+  },
+  {
+    "Id": "CN-Hangzhou",
+    "CountryCode": "CN",
+    "Name": "Hangzhou",
+    "ChineseName": "杭州",
+    "Latitude": 30.29365,
+    "Longitude": 120.16142,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1808926
+  },
+  {
+    "Id": "CN-Chongqing",
+    "CountryCode": "CN",
+    "Name": "Chongqing",
+    "ChineseName": "重庆",
+    "Latitude": 29.56026,
+    "Longitude": 106.55771,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1814906
+  },
+  {
+    "Id": "CN-Wuhan",
+    "CountryCode": "CN",
+    "Name": "Wuhan",
+    "ChineseName": "武汉",
+    "Latitude": 30.58333,
+    "Longitude": 114.26667,
+    "TimeZone": "Asia/Shanghai",
+    "GeoNamesId": 1791247
+  },
+  {
+    "Id": "US-NewYork",
+    "CountryCode": "US",
+    "Name": "New York",
+    "ChineseName": "纽约",
+    "Latitude": 40.71427,
+    "Longitude": -74.00597,
+    "TimeZone": "America/New_York",
+    "GeoNamesId": 5128581
+  },
+  {
+    "Id": "US-Chicago",
+    "CountryCode": "US",
+    "Name": "Chicago",
+    "ChineseName": "芝加哥",
+    "Latitude": 41.85003,
+    "Longitude": -87.65005,
+    "TimeZone": "America/Chicago",
+    "GeoNamesId": 4887398
+  },
+  {
+    "Id": "US-LosAngeles",
+    "CountryCode": "US",
+    "Name": "Los Angeles",
+    "ChineseName": "洛杉矶",
+    "Latitude": 34.05223,
+    "Longitude": -118.24368,
+    "TimeZone": "America/Los_Angeles",
+    "GeoNamesId": 5368361
+  },
+  {
+    "Id": "US-SanFrancisco",
+    "CountryCode": "US",
+    "Name": "San Francisco",
+    "ChineseName": "旧金山",
+    "Latitude": 37.77493,
+    "Longitude": -122.41942,
+    "TimeZone": "America/Los_Angeles",
+    "GeoNamesId": 5391959
+  },
+  {
+    "Id": "US-Washington",
+    "CountryCode": "US",
+    "Name": "Washington",
+    "ChineseName": "华盛顿",
+    "Latitude": 38.89511,
+    "Longitude": -77.03637,
+    "TimeZone": "America/New_York",
+    "GeoNamesId": 4140963
+  },
+  {
+    "Id": "GB-London",
+    "CountryCode": "GB",
+    "Name": "London",
+    "ChineseName": "伦敦",
+    "Latitude": 51.50853,
+    "Longitude": -0.12574,
+    "TimeZone": "Europe/London",
+    "GeoNamesId": 2643743
+  },
+  {
+    "Id": "GB-Manchester",
+    "CountryCode": "GB",
+    "Name": "Manchester",
+    "ChineseName": "曼彻斯特",
+    "Latitude": 53.48095,
+    "Longitude": -2.23743,
+    "TimeZone": "Europe/London",
+    "GeoNamesId": 2643123
+  },
+  {
+    "Id": "CA-Toronto",
+    "CountryCode": "CA",
+    "Name": "Toronto",
+    "ChineseName": "多伦多",
+    "Latitude": 43.70643,
+    "Longitude": -79.39864,
+    "TimeZone": "America/Toronto",
+    "GeoNamesId": 6167865
+  },
+  {
+    "Id": "AU-Melbourne",
+    "CountryCode": "AU",
+    "Name": "Melbourne",
+    "ChineseName": "墨尔本",
+    "Latitude": -37.814,
+    "Longitude": 144.96332,
+    "TimeZone": "Australia/Melbourne",
+    "GeoNamesId": 2158177
+  },
+  {
+    "Id": "CA-Vancouver",
+    "CountryCode": "CA",
+    "Name": "Vancouver",
+    "ChineseName": "温哥华",
+    "Latitude": 49.24966,
+    "Longitude": -123.11934,
+    "TimeZone": "America/Vancouver",
+    "GeoNamesId": 6173331
+  },
+  {
+    "Id": "JP-Tokyo",
+    "CountryCode": "JP",
+    "Name": "Tokyo",
+    "ChineseName": "东京",
+    "Latitude": 35.6895,
+    "Longitude": 139.69171,
+    "TimeZone": "Asia/Tokyo",
+    "GeoNamesId": 1850147
+  },
+  {
+    "Id": "KR-Seoul",
+    "CountryCode": "KR",
+    "Name": "Seoul",
+    "ChineseName": "首尔",
+    "Latitude": 37.566,
+    "Longitude": 126.9784,
+    "TimeZone": "Asia/Seoul",
+    "GeoNamesId": 1835848
+  },
+  {
+    "Id": "JP-Osaka",
+    "CountryCode": "JP",
+    "Name": "Osaka",
+    "ChineseName": "大阪",
+    "Latitude": 34.69379,
+    "Longitude": 135.50107,
+    "TimeZone": "Asia/Tokyo",
+    "GeoNamesId": 1853909
+  },
+  {
+    "Id": "FR-Paris",
+    "CountryCode": "FR",
+    "Name": "Paris",
+    "ChineseName": "巴黎",
+    "Latitude": 48.85341,
+    "Longitude": 2.3488,
+    "TimeZone": "Europe/Paris",
+    "GeoNamesId": 2988507
+  },
+  {
+    "Id": "DE-Berlin",
+    "CountryCode": "DE",
+    "Name": "Berlin",
+    "ChineseName": "柏林",
+    "Latitude": 52.52437,
+    "Longitude": 13.41053,
+    "TimeZone": "Europe/Berlin",
+    "GeoNamesId": 2950159
+  },
+  {
+    "Id": "DE-Munich",
+    "CountryCode": "DE",
+    "Name": "Munich",
+    "ChineseName": "慕尼黑",
+    "Latitude": 48.13743,
+    "Longitude": 11.57549,
+    "TimeZone": "Europe/Berlin",
+    "GeoNamesId": 2867714
+  },
+  {
+    "Id": "IT-Rome",
+    "CountryCode": "IT",
+    "Name": "Rome",
+    "ChineseName": "罗马",
+    "Latitude": 41.89193,
+    "Longitude": 12.51133,
+    "TimeZone": "Europe/Rome",
+    "GeoNamesId": 3169070
+  },
+  {
+    "Id": "IT-Milan",
+    "CountryCode": "IT",
+    "Name": "Milan",
+    "ChineseName": "米兰",
+    "Latitude": 45.46427,
+    "Longitude": 9.18951,
+    "TimeZone": "Europe/Rome",
+    "GeoNamesId": 3173435
+  },
+  {
+    "Id": "AU-Sydney",
+    "CountryCode": "AU",
+    "Name": "Sydney",
+    "ChineseName": "悉尼",
+    "Latitude": -33.86785,
+    "Longitude": 151.20732,
+    "TimeZone": "Australia/Sydney",
+    "GeoNamesId": 2147714
+  },
+  {
+    "Id": "ES-Madrid",
+    "CountryCode": "ES",
+    "Name": "Madrid",
+    "ChineseName": "马德里",
+    "Latitude": 40.4165,
+    "Longitude": -3.70256,
+    "TimeZone": "Europe/Madrid",
+    "GeoNamesId": 3117735
+  },
+  {
+    "Id": "ES-Barcelona",
+    "CountryCode": "ES",
+    "Name": "Barcelona",
+    "ChineseName": "巴塞罗那",
+    "Latitude": 41.38879,
+    "Longitude": 2.15899,
+    "TimeZone": "Europe/Madrid",
+    "GeoNamesId": 3128760
+  },
+  {
+    "Id": "PT-Lisbon",
+    "CountryCode": "PT",
+    "Name": "Lisbon",
+    "ChineseName": "里斯本",
+    "Latitude": 38.72509,
+    "Longitude": -9.1498,
+    "TimeZone": "Europe/Lisbon",
+    "GeoNamesId": 2267057
+  },
+  {
+    "Id": "RU-Moscow",
+    "CountryCode": "RU",
+    "Name": "Moscow",
+    "ChineseName": "莫斯科",
+    "Latitude": 55.75204,
+    "Longitude": 37.61781,
+    "TimeZone": "Europe/Moscow",
+    "GeoNamesId": 524901
+  },
+  {
+    "Id": "IN-NewDelhi",
+    "CountryCode": "IN",
+    "Name": "New Delhi",
+    "ChineseName": "新德里",
+    "Latitude": 28.62137,
+    "Longitude": 77.2148,
+    "TimeZone": "Asia/Kolkata",
+    "GeoNamesId": 1261481
+  },
+  {
+    "Id": "BR-Brasilia",
+    "CountryCode": "BR",
+    "Name": "Brasilia",
+    "ChineseName": "巴西利亚",
+    "Latitude": -15.77972,
+    "Longitude": -47.92972,
+    "TimeZone": "America/Sao_Paulo",
+    "GeoNamesId": 3469058
+  },
+  {
+    "Id": "IN-Mumbai",
+    "CountryCode": "IN",
+    "Name": "Mumbai",
+    "ChineseName": "孟买",
+    "Latitude": 19.07283,
+    "Longitude": 72.88261,
+    "TimeZone": "Asia/Kolkata",
+    "GeoNamesId": 1275339
+  },
+  {
+    "Id": "BR-SaoPaulo",
+    "CountryCode": "BR",
+    "Name": "Sao Paulo",
+    "ChineseName": "圣保罗",
+    "Latitude": -23.5475,
+    "Longitude": -46.63611,
+    "TimeZone": "America/Sao_Paulo",
+    "GeoNamesId": 3448439
+  },
+  {
+    "Id": "RU-SaintPetersburg",
+    "CountryCode": "RU",
+    "Name": "Saint Petersburg",
+    "ChineseName": "圣彼得堡",
+    "Latitude": 59.93863,
+    "Longitude": 30.31413,
+    "TimeZone": "Europe/Moscow",
+    "GeoNamesId": 498817
+  },
+  {
+    "Id": "SG-Singapore",
+    "CountryCode": "SG",
+    "Name": "Singapore",
+    "ChineseName": "新加坡",
+    "Latitude": 1.28967,
+    "Longitude": 103.85007,
+    "TimeZone": "Asia/Singapore",
+    "GeoNamesId": 1880252
+  },
+  {
+    "Id": "NZ-Auckland",
+    "CountryCode": "NZ",
+    "Name": "Auckland",
+    "ChineseName": "奥克兰",
+    "Latitude": -36.84853,
+    "Longitude": 174.76349,
+    "TimeZone": "Pacific/Auckland",
+    "GeoNamesId": 2193733
+  },
+  {
+    "Id": "NZ-Wellington",
+    "CountryCode": "NZ",
+    "Name": "Wellington",
+    "ChineseName": "惠灵顿",
+    "Latitude": -41.28664,
+    "Longitude": 174.77557,
+    "TimeZone": "Pacific/Auckland",
+    "GeoNamesId": 2179537
+  },
+  {
+    "Id": "SA-Riyadh",
+    "CountryCode": "SA",
+    "Name": "Riyadh",
+    "ChineseName": "利雅得",
+    "Latitude": 24.68773,
+    "Longitude": 46.72185,
+    "TimeZone": "Asia/Riyadh",
+    "GeoNamesId": 108410
+  },
+  {
+    "Id": "MX-Tijuana",
+    "CountryCode": "MX",
+    "Name": "Tijuana",
+    "ChineseName": "蒂华纳",
+    "Latitude": 32.5027,
+    "Longitude": -117.00371,
+    "TimeZone": "America/Tijuana",
+    "GeoNamesId": 3981609
+  },
+  {
+    "Id": "MX-MexicoCity",
+    "CountryCode": "MX",
+    "Name": "Mexico City",
+    "ChineseName": "墨西哥城",
+    "Latitude": 19.42847,
+    "Longitude": -99.12766,
+    "TimeZone": "America/Mexico_City",
+    "GeoNamesId": 3530597
+  },
+  {
+    "Id": "AE-Dubai",
+    "CountryCode": "AE",
+    "Name": "Dubai",
+    "ChineseName": "迪拜",
+    "Latitude": 25.07725,
+    "Longitude": 55.30927,
+    "TimeZone": "Asia/Dubai",
+    "GeoNamesId": 292223
+  },
+  {
+    "Id": "AE-AbuDhabi",
+    "CountryCode": "AE",
+    "Name": "Abu Dhabi",
+    "ChineseName": "阿布扎比",
+    "Latitude": 24.45118,
+    "Longitude": 54.39696,
+    "TimeZone": "Asia/Dubai",
+    "GeoNamesId": 292968
+  }
+]

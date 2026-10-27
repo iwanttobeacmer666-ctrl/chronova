@@ -1,0 +1,308 @@
+[
+  {
+    "Code": "110000",
+    "Name": "北京市",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 116.405285,
+    "Latitude": 39.904989
+  },
+  {
+    "Code": "120000",
+    "Name": "天津市",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 117.190182,
+    "Latitude": 39.125596
+  },
+  {
+    "Code": "130000",
+    "Name": "河北省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 11,
+    "Longitude": 114.502461,
+    "Latitude": 38.045474
+  },
+  {
+    "Code": "140000",
+    "Name": "山西省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 11,
+    "Longitude": 112.549248,
+    "Latitude": 37.857014
+  },
+  {
+    "Code": "150000",
+    "Name": "内蒙古自治区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 12,
+    "Longitude": 111.670801,
+    "Latitude": 40.818311
+  },
+  {
+    "Code": "210000",
+    "Name": "辽宁省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 14,
+    "Longitude": 123.429096,
+    "Latitude": 41.796767
+  },
+  {
+    "Code": "220000",
+    "Name": "吉林省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 9,
+    "Longitude": 125.3245,
+    "Latitude": 43.886841
+  },
+  {
+    "Code": "230000",
+    "Name": "黑龙江省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 13,
+    "Longitude": 126.642464,
+    "Latitude": 45.756967
+  },
+  {
+    "Code": "310000",
+    "Name": "上海市",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 121.472644,
+    "Latitude": 31.231706
+  },
+  {
+    "Code": "320000",
+    "Name": "江苏省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 13,
+    "Longitude": 118.767413,
+    "Latitude": 32.041544
+  },
+  {
+    "Code": "330000",
+    "Name": "浙江省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 11,
+    "Longitude": 120.153576,
+    "Latitude": 30.287459
+  },
+  {
+    "Code": "340000",
+    "Name": "安徽省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 117.283042,
+    "Latitude": 31.86119
+  },
+  {
+    "Code": "350000",
+    "Name": "福建省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 9,
+    "Longitude": 119.306239,
+    "Latitude": 26.075302
+  },
+  {
+    "Code": "360000",
+    "Name": "江西省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 11,
+    "Longitude": 115.892151,
+    "Latitude": 28.676493
+  },
+  {
+    "Code": "370000",
+    "Name": "山东省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 117.000923,
+    "Latitude": 36.675807
+  },
+  {
+    "Code": "410000",
+    "Name": "河南省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 18,
+    "Longitude": 113.665412,
+    "Latitude": 34.757975
+  },
+  {
+    "Code": "420000",
+    "Name": "湖北省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 17,
+    "Longitude": 114.298572,
+    "Latitude": 30.584355
+  },
+  {
+    "Code": "430000",
+    "Name": "湖南省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 14,
+    "Longitude": 112.982279,
+    "Latitude": 28.19409
+  },
+  {
+    "Code": "440000",
+    "Name": "广东省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 21,
+    "Longitude": 113.280637,
+    "Latitude": 23.125178
+  },
+  {
+    "Code": "450000",
+    "Name": "广西壮族自治区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 14,
+    "Longitude": 108.320004,
+    "Latitude": 22.82402
+  },
+  {
+    "Code": "460000",
+    "Name": "海南省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 19,
+    "Longitude": 110.33119,
+    "Latitude": 20.031971
+  },
+  {
+    "Code": "500000",
+    "Name": "重庆市",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 38,
+    "Longitude": 106.504962,
+    "Latitude": 29.533155
+  },
+  {
+    "Code": "510000",
+    "Name": "四川省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 21,
+    "Longitude": 104.065735,
+    "Latitude": 30.659462
+  },
+  {
+    "Code": "520000",
+    "Name": "贵州省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 9,
+    "Longitude": 106.713478,
+    "Latitude": 26.578343
+  },
+  {
+    "Code": "530000",
+    "Name": "云南省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 16,
+    "Longitude": 102.712251,
+    "Latitude": 25.040609
+  },
+  {
+    "Code": "540000",
+    "Name": "西藏自治区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 7,
+    "Longitude": 91.132212,
+    "Latitude": 29.660361
+  },
+  {
+    "Code": "610000",
+    "Name": "陕西省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 10,
+    "Longitude": 108.948024,
+    "Latitude": 34.263161
+  },
+  {
+    "Code": "620000",
+    "Name": "甘肃省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 14,
+    "Longitude": 103.823557,
+    "Latitude": 36.058039
+  },
+  {
+    "Code": "630000",
+    "Name": "青海省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 8,
+    "Longitude": 101.778916,
+    "Latitude": 36.623178
+  },
+  {
+    "Code": "640000",
+    "Name": "宁夏回族自治区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 5,
+    "Longitude": 106.278179,
+    "Latitude": 38.46637
+  },
+  {
+    "Code": "650000",
+    "Name": "新疆维吾尔自治区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 24,
+    "Longitude": 87.617733,
+    "Latitude": 43.792818
+  },
+  {
+    "Code": "710000",
+    "Name": "台湾省",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 0,
+    "Longitude": 121.509062,
+    "Latitude": 25.044332
+  },
+  {
+    "Code": "810000",
+    "Name": "香港特别行政区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 18,
+    "Longitude": 114.173355,
+    "Latitude": 22.320048
+  },
+  {
+    "Code": "820000",
+    "Name": "澳门特别行政区",
+    "Level": "province",
+    "ParentCode": "100000",
+    "Children": 8,
+    "Longitude": 113.54909,
+    "Latitude": 22.198951
+  }
+]
