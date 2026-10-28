@@ -113,6 +113,8 @@ public sealed class UserSettings
     public string ChinaProvinceCode { get; set; } = "110000";
     public string ChinaCityCode { get; set; } = "110000";
     public string ChinaDistrictCode { get; set; } = "110000";
+    public string BackgroundFile { get; set; } = "";
+    public double BackgroundBrightness { get; set; } = 0.55;
 }
 
 public sealed class SettingsStore

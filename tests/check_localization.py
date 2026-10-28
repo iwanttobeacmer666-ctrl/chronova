@@ -5,7 +5,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
 texts = set()
-for filename in ("MainWindow.xaml.cs", "MainWindow.Tools.cs", "MainWindow.Weather.cs", "MainWindow.China.cs", "App.xaml.cs"):
+for filename in ("MainWindow.xaml.cs", "MainWindow.Tools.cs", "MainWindow.Weather.cs", "MainWindow.China.cs", "MainWindow.Background.cs", "App.xaml.cs"):
     source = (root / filename).read_text(encoding="utf-8-sig")
     for chinese, english in re.findall(r'T\("((?:[^"\\]|\\.)*)",\s*"((?:[^"\\]|\\.)*)"\)', source):
         texts.add(json.loads('"' + english + '"'))

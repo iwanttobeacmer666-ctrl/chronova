@@ -40,6 +40,7 @@ public partial class MainWindow
     private void InitializeTools()
     {
         ApplyLanguage();
+        InitializeBackground();
         toolsTimer.Tick += (_, _) => UpdateTools();
         toolsTimer.Start();
     }
@@ -167,6 +168,7 @@ public partial class MainWindow
         var updated = new UserSettings
         {
             TimeZoneId = zone, LanguageCode = language,
+            BackgroundFile = preferences.BackgroundFile, BackgroundBrightness = preferences.BackgroundBrightness,
             WeatherCityId = selectedRegion?.Id ?? WeatherCityInput.SelectedValue as string ?? preferences.WeatherCityId,
             CustomWeatherCity = selectedRegion?.Id.StartsWith("CN-AD-", StringComparison.Ordinal) == true ? selectedRegion : null,
             ChinaProvinceCode = china ? ChinaProvinceInput.SelectedValue as string ?? preferences.ChinaProvinceCode : preferences.ChinaProvinceCode,
@@ -198,6 +200,7 @@ public partial class MainWindow
             foreach (var child in LogicalTreeHelper.GetChildren(node).OfType<DependencyObject>()) Translate(child);
         }
         Translate(this);
+        AutomationProperties.SetName(BackgroundBrightnessInput, T("背景明暗", "Background brightness"));
         Language = XmlLanguage.GetLanguage(preferences.LanguageCode);
         var zone = Schedule.Zone(preferences.TimeZoneId);
         Title = T("时砂 · ", "时砂 · ") + ZoneLabel(zone);

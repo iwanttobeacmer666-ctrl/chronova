@@ -201,7 +201,7 @@ public partial class MainWindow : Window
                 tasks.Remove(task); if (editing == task.Id) ResetEditor(); Persist(); RenderTasks();
             });
             panel.Children.Add(actions);
-            TaskList.Children.Add(new Border { Child = panel, Background = Brush("#1A2739"), CornerRadius = new CornerRadius(12), Padding = new Thickness(16), Margin = new Thickness(0, 0, 0, 10) });
+            TaskList.Children.Add(new Border { Child = panel, Background = Brush("#D91A2739"), CornerRadius = new CornerRadius(12), Padding = new Thickness(16), Margin = new Thickness(0, 0, 0, 10) });
         }
     }
     private void ToggleStartup(object sender, RoutedEventArgs e)

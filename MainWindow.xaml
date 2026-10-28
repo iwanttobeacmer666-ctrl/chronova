@@ -14,9 +14,12 @@
   </Style>
  </Window.Resources>
  <Border Background="#101827" BorderBrush="#29384D" BorderThickness="1" CornerRadius="18">
+ <Grid>
+ <Border x:Name="BackgroundLayer" CornerRadius="17" IsHitTestVisible="False"/>
+ <Border x:Name="BackgroundShade" CornerRadius="17" Background="Black" Opacity="0" IsHitTestVisible="False"/>
  <Grid Margin="18,14">
   <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
-  <Grid>
+  <Grid x:Name="HeaderPanel">
    <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
    <Border x:Name="HeaderDragArea" Background="Transparent" MouseLeftButtonDown="DragHeader" Cursor="SizeAll" ToolTip="按住此处拖动窗口"><TextBlock Text="时 砂" FontWeight="Bold" FontSize="14" VerticalAlignment="Center"/></Border>
    <StackPanel Grid.Column="1" Orientation="Horizontal">
@@ -33,7 +36,7 @@
    <Grid x:Name="ClockPanel" Margin="0,0,32,0">
     <Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
     <Grid>
-    <Border CornerRadius="20" BorderBrush="#293C54" BorderThickness="1"><Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#1C3449"/><GradientStop Color="#111E30" Offset="1"/></LinearGradientBrush></Border.Background></Border>
+    <Border x:Name="ClockSurface" CornerRadius="20" BorderBrush="#293C54" BorderThickness="1"><Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#1C3449"/><GradientStop Color="#111E30" Offset="1"/></LinearGradientBrush></Border.Background></Border>
     <StackPanel VerticalAlignment="Center" Margin="22,14">
      <TextBlock x:Name="ZoneCaption" Text="●  北京时间  /  UTC +08:00" Foreground="#9EDDCB" FontSize="11" Margin="0,0,0,8" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}"/>
      <Grid Margin="0,5,0,5">
@@ -83,6 +86,12 @@
        <ComboBox x:Name="ZoneInput" DisplayMemberPath="Label" SelectedValuePath="Id" Height="30" AutomationProperties.Name="时区"/>
        <TextBlock Text="界面语言" Tag="界面语言|Language" Foreground="#B8C8DB" FontSize="11" Margin="0,10,0,5"/>
        <ComboBox x:Name="LanguageInput" Height="30" DisplayMemberPath="Label" SelectedValuePath="Id" AutomationProperties.Name="语言"/>
+       <TextBlock Text="背景图片" Tag="背景图片|Background image" Foreground="#B8C8DB" FontSize="11" Margin="0,12,0,7"/>
+       <WrapPanel><Button x:Name="ChooseBackgroundButton" Content="选择背景图" Tag="选择背景图|Choose image" Click="ChooseBackground" Padding="10,7" Margin="0,0,8,6" FontSize="11"/><Button x:Name="ResetBackgroundButton" Content="恢复默认背景" Tag="恢复默认背景|Reset background" Click="ResetBackground" Padding="10,7" Margin="0,0,0,6" FontSize="11"/></WrapPanel>
+       <TextBlock Text="背景明暗" Tag="背景明暗|Background brightness" Foreground="#B8C8DB" FontSize="11" Margin="0,4,0,5"/>
+       <Slider x:Name="BackgroundBrightnessInput" Minimum="0.15" Maximum="1" Value="0.55" SmallChange="0.05" LargeChange="0.1" ValueChanged="ChangeBackgroundBrightness"/>
+       <TextBlock Text="JPG / PNG · 仅保存在本机，自动保存" Tag="JPG / PNG · 仅保存在本机，自动保存|JPG / PNG · Local only, saved automatically" Foreground="#9DAFC5" FontSize="10" TextWrapping="Wrap" Margin="0,5,0,0"/>
+       <TextBlock x:Name="BackgroundMessage" Foreground="#FFC1AA" FontSize="10" TextWrapping="Wrap" Margin="0,5,0,0"/>
        <TextBlock Text="天气国家" Tag="天气国家|Weather country" Foreground="#B8C8DB" FontSize="11" Margin="0,10,0,5"/>
        <ComboBox x:Name="WeatherCountryInput" Height="30" DisplayMemberPath="Label" SelectedValuePath="Id" SelectionChanged="ChangeWeatherCountry" AutomationProperties.Name="天气国家"/>
        <TextBlock x:Name="WeatherCityLabel" Text="天气城市" Tag="天气城市|Weather city" Foreground="#B8C8DB" FontSize="11" Margin="0,10,0,5"/>
@@ -106,7 +115,7 @@
    <Grid x:Name="MemoPanel" Grid.Column="1">
     <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
     <DockPanel Margin="0,0,0,16"><TextBlock Text="我的备忘录" Tag="我的备忘录|My reminders" FontSize="23" FontWeight="SemiBold"/><TextBlock x:Name="TaskCount" Foreground="#92A5BD" HorizontalAlignment="Right" VerticalAlignment="Center"/></DockPanel>
-    <Border Grid.Row="1" Background="#1C293C" CornerRadius="14" Padding="18" Margin="0,0,0,18">
+    <Border Grid.Row="1" Background="#D91C293C" CornerRadius="14" Padding="18" Margin="0,0,0,18">
      <StackPanel>
       <TextBlock x:Name="EditorTitle" Text="添加一件事" FontSize="13" Foreground="#B8C8DB" Margin="0,0,0,10"/>
       <TextBox x:Name="TitleInput" MaxLength="200" AutomationProperties.Name="任务内容" ToolTip="任务内容，例如：去健身"/>
@@ -123,7 +132,8 @@
     <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto"><StackPanel x:Name="TaskList"/></ScrollViewer>
    </Grid>
   </Grid>
-  <DockPanel Grid.Row="2"><CheckBox x:Name="StartupToggle" Content="开机启动" Tag="开机启动|Launch at sign-in" Click="ToggleStartup" FontSize="10"/><TextBlock x:Name="FooterHint" Text="关闭后留在托盘" FontSize="10" Foreground="#8EA1B9" HorizontalAlignment="Right"/></DockPanel>
+  <DockPanel x:Name="FooterPanel" Grid.Row="2"><CheckBox x:Name="StartupToggle" Content="开机启动" Tag="开机启动|Launch at sign-in" Click="ToggleStartup" FontSize="10"/><TextBlock x:Name="FooterHint" Text="关闭后留在托盘" FontSize="10" Foreground="#8EA1B9" HorizontalAlignment="Right"/></DockPanel>
+ </Grid>
  </Grid>
  </Border>
 </Window>

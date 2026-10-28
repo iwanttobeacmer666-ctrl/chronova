@@ -1,7 +1,10 @@
 using System;
 using System.Reflection;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using ShiSha;
 
 internal static class LayoutProgram
@@ -82,6 +85,55 @@ internal static class LayoutProgram
             typeof(MainWindow).GetMethod("SaveSettings", BindingFlags.NonPublic | BindingFlags.Instance)!.Invoke(window, new object[] { window, new RoutedEventArgs() });
             if (((UserSettings)preferencesField.GetValue(window)!).WeatherCityId != "CN-AD-110108") throw new Exception("Saving other settings must not replace the district");
             Console.WriteLine("PASS other settings preserve the saved district");
+            void Invoke(string name, params object[] args) => typeof(MainWindow).GetMethod(name, BindingFlags.NonPublic | BindingFlags.Instance)!.Invoke(window, args);
+            var fixture = Path.Combine(AppContext.BaseDirectory, "background-fixture.png");
+            var drawing = new DrawingVisual();
+            using (var dc = drawing.RenderOpen())
+            {
+                dc.DrawRectangle(new LinearGradientBrush(Colors.DarkSlateBlue, Colors.DarkSeaGreen, 25), null, new Rect(0, 0, 2400, 1200));
+                dc.DrawEllipse(Brushes.Gold, null, new Point(1800, 350), 180, 180);
+            }
+            var pixels = new RenderTargetBitmap(2400, 1200, 96, 96, PixelFormats.Pbgra32); pixels.Render(drawing);
+            var encoder = new PngBitmapEncoder(); encoder.Frames.Add(BitmapFrame.Create(pixels));
+            using (var output = File.Create(fixture)) encoder.Save(output);
+            Invoke("SetBackgroundImage", fixture);
+            File.Delete(fixture);
+            var imageBrush = (ImageBrush)((Border)window.FindName("BackgroundLayer")).Background;
+            if (((BitmapSource)imageBrush.ImageSource).PixelWidth != 1600 || imageBrush.Stretch != Stretch.UniformToFill) throw new Exception("Background must be downscaled and cover the widget");
+            Console.WriteLine("PASS background imports a bounded copy and releases the original file");
+            var slider = (Slider)window.FindName("BackgroundBrightnessInput"); slider.Value = 0.7;
+            Invoke("SaveBackgroundBrightness");
+            var stored = new SettingsStore(Path.Combine(AppContext.BaseDirectory, "data", "settings.json")).Load();
+            if (stored.BackgroundFile.Length == 0 || Math.Abs(stored.BackgroundBrightness - 0.7) > 0.001) throw new Exception("Background settings not persisted");
+            if (Math.Abs(((Border)window.FindName("BackgroundShade")).Opacity - 0.3) > 0.001) throw new Exception("Brightness preview missing");
+            Console.WriteLine("PASS brightness previews and persists");
+            Invoke("SaveSettings", window, new RoutedEventArgs());
+            stored = new SettingsStore(Path.Combine(AppContext.BaseDirectory, "data", "settings.json")).Load();
+            if (stored.BackgroundFile.Length == 0 || stored.BackgroundBrightness != 0.7 || stored.WeatherCityId != "CN-AD-110108") throw new Exception("Other settings lost the background or district");
+            Invoke("ApplyBackground", new object[] { null! });
+            Invoke("InitializeBackground");
+            if (((Border)window.FindName("BackgroundLayer")).Background is not ImageBrush) throw new Exception("Background did not restore after loading");
+            Console.WriteLine("PASS reload restores the managed image after original deletion; other settings preserve it");
+            string activeFile = stored.BackgroundFile;
+            File.WriteAllText(fixture, "invalid image");
+            bool rejected = false;
+            try { Invoke("SetBackgroundImage", fixture); } catch (TargetInvocationException ex) when (ex.InnerException is InvalidDataException) { rejected = true; }
+            File.Delete(fixture);
+            if (!rejected || ((UserSettings)preferencesField.GetValue(window)!).BackgroundFile != activeFile || ((Border)window.FindName("BackgroundLayer")).Background is not ImageBrush) throw new Exception("Invalid image changed the current background");
+            Console.WriteLine("PASS invalid image preserves the current background");
+            var jpegEncoder = new JpegBitmapEncoder(); jpegEncoder.Frames.Add(BitmapFrame.Create(pixels));
+            using (var output = File.Create(fixture)) jpegEncoder.Save(output);
+            Invoke("SetBackgroundImage", fixture); File.Delete(fixture);
+            if (((Border)window.FindName("BackgroundLayer")).Background is not ImageBrush) throw new Exception("JPG did not load");
+            Console.WriteLine("PASS JPG imports and replaces the background");
+            Invoke("ToggleTool", "settings"); Layout();
+            var preview = new RenderTargetBitmap((int)window.Width, (int)window.Height, 96, 96, PixelFormats.Pbgra32); preview.Render(root);
+            var previewEncoder = new PngBitmapEncoder(); previewEncoder.Frames.Add(BitmapFrame.Create(preview));
+            using (var output = File.Create(Path.Combine(AppContext.BaseDirectory, "background-preview.png"))) previewEncoder.Save(output);
+            Invoke("ResetBackground", window, new RoutedEventArgs());
+            stored = new SettingsStore(Path.Combine(AppContext.BaseDirectory, "data", "settings.json")).Load();
+            if (stored.BackgroundFile != "" || stored.WeatherCityId != "CN-AD-110108" || ((Border)window.FindName("BackgroundLayer")).Background != null) throw new Exception("Reset lost other settings or did not restore the default background");
+            Console.WriteLine("PASS reset restores solid background and preserves other settings");
         }
         finally { typeof(MainWindow).GetMethod("ExitApp", BindingFlags.NonPublic | BindingFlags.Instance)!.Invoke(window, null); }
     }

@@ -11,6 +11,7 @@
     <ApplicationIcon>assets\时砂.ico</ApplicationIcon>
     <Product>时砂</Product>
     <Title>时砂</Title>
+    <Version>1.1.0</Version>
     <Description>时砂桌面时钟、任务提醒与天气</Description>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
@@ -19,4 +20,5 @@
   <ItemGroup><Compile Include="UiText.cs"/><EmbeddedResource Include="Localization.json" LogicalName="ShiSha.Localization.json"/></ItemGroup>
   <ItemGroup><Compile Include="Weather.cs"/><Compile Include="MainWindow.Weather.cs"/><EmbeddedResource Include="Cities.json" LogicalName="ShiSha.Cities.json"/></ItemGroup>
   <ItemGroup><Compile Include="ChinaRegions.cs"/><Compile Include="MainWindow.China.cs"/><EmbeddedResource Include="ChinaProvinces.json" LogicalName="ShiSha.ChinaProvinces.json"/></ItemGroup>
+  <ItemGroup><Compile Include="MainWindow.Background.cs"/></ItemGroup>
 </Project>

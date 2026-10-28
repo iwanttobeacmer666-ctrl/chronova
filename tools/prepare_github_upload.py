@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import re
 import zipfile
+import sys
 
 root = Path(__file__).resolve().parent.parent
 paths = []
@@ -21,6 +22,8 @@ for name in files:
     if Path(name).suffix not in (".png", ".ico"):
         assert not secret.search((root / name).read_text(encoding="utf-8-sig")), f"Credential-shaped text: {name}"
 archive = root / "release" / "时砂-Windows-x64-便携版.zip"
+if len(sys.argv) > 1:
+    archive = root / "release" / sys.argv[1]
 with zipfile.ZipFile(archive) as zipped:
     assert not any("/data/" in p.replace("\\", "/") for p in zipped.namelist())
     assert zipped.testzip() is None

@@ -3,11 +3,19 @@ from pathlib import Path
 import shutil
 import struct
 import zipfile
+import sys
+import re
 
 root = Path(__file__).resolve().parent.parent
 source = root / "release" / "时砂便携版"
 archive = root / "release" / "时砂-Windows-x64-便携版.zip"
 check_root = root / ".package-check" / "朋友 接收"
+if len(sys.argv) > 1:
+    version = sys.argv[1]
+    assert re.fullmatch(r"v\d+\.\d+\.\d+", version), "Use a version such as v1.1.0"
+    source = root / "release" / version / "时砂便携版"
+    archive = root / "release" / f"Chronova-{version}-windows-x64-portable.zip"
+    check_root = root / ".package-check" / version / "朋友 接收"
 assert source.is_dir() and not archive.exists(), "Package source missing or ZIP already exists"
 assert not check_root.exists(), "Verification destination already exists"
 files = sorted(p for p in source.rglob("*") if p.is_file())
